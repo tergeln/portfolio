@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio of Tergel Nyamlkhagva: a single static page (`index.html` + `styles.css`), no build step.
+Personal portfolio of Tergel Nyamlkhagva: a single static page in English and Mongolian (`index.html`, `styles.css`, `script.js`, photos and fonts in `assets/`), no build step.
 
 ## View locally
 

@@ -3,194 +3,214 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tergel Nyamlkhagva — Software Engineering Student</title>
+  <title>Tergel Nyamlkhagva, software engineering student</title>
   <meta name="description" content="Portfolio of Tergel Nyamlkhagva, software engineering student at the National University of Mongolia: projects, experience, skills and certificates.">
+  <link rel="preload" href="assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="#home">tergel<span>@</span>portfolio<span>:~$</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="wrap">
+      <a class="brand" href="#home">Tergel N.</a>
+      <nav aria-label="Sections">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#certificates" data-i18n="nav.certificates">Certificates</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language / Хэл">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="mn" aria-pressed="false">МН</button>
+      </div>
+    </div>
   </header>
 
   <main>
     <section id="home" class="hero">
-      <p class="prompt">$ whoami</p>
-      <h1>Tergel<br>Nyamlkhagva</h1>
-      <p class="lead">Software engineering student at the National University of Mongolia. I build for the web, test software, and led the team behind <a href="https://www.mci.mn/" target="_blank" rel="noopener">mci.mn</a>.</p>
-      <div class="actions">
-        <a class="btn solid" href="#projects">See my work</a>
-        <a class="btn" href="https://github.com/tergeln" target="_blank" rel="noopener">GitHub ↗</a>
+      <div class="wrap">
+        <div>
+          <h1><span>Tergel</span><span>Nyamlkhagva</span></h1>
+          <p class="lead" data-i18n="hero.lead">Software engineering student at the National University of Mongolia. I build for the web, test software, and led the team behind <a href="https://www.mci.mn/" target="_blank" rel="noopener">mci.mn</a>.</p>
+          <div class="actions">
+            <a class="btn primary" href="#contact" data-i18n="hero.contact">Get in touch</a>
+            <a class="btn" href="#projects" data-i18n="hero.work">See my projects</a>
+          </div>
+        </div>
+        <div class="prints">
+          <figure class="print p1"><img src="assets/photo-sea.jpg" width="900" height="1200" alt="Tergel wrapped in a green plaid blanket in front of a stormy sea" data-i18n-alt="alt.sea"></figure>
+          <figure class="print p2"><img src="assets/photo-campus.jpg" width="900" height="1200" alt="Tergel standing by a pond on a university campus under a blue sky" data-i18n-alt="alt.campus"></figure>
+          <figure class="print p3"><img src="assets/photo-gate.jpg" width="900" height="1200" alt="Tergel balancing on one leg in front of a red wooden gate painted with a red and blue circle" data-i18n-alt="alt.gate"></figure>
+        </div>
       </div>
-      <dl class="facts">
-        <div><dt>GPA at NUM</dt><dd>4.25 <span>/ 4.5</span></dd></div>
-        <div><dt>Exchange</dt><dd>South Korea <span>2026</span></dd></div>
-        <div><dt>Team led</dt><dd>4–5 <span>developers</span></dd></div>
-      </dl>
     </section>
 
     <section id="about">
-      <h2><span class="num">01</span> About</h2>
-      <p>I'm a software engineering student at the National University of Mongolia, with international experience as an exchange student at Chungbuk National University in South Korea. I led a team of 4–5 developers to build and launch the Magic Code AI website, and completed an internship at MCS Technologies LLC.</p>
-      <p>My interests are software development, front-end development, software testing, and AI-based applications.</p>
+      <div class="wrap cols reveal">
+        <h2 data-i18n="about.title">About me</h2>
+        <div class="prose">
+          <p data-i18n="about.p1">I'm a software engineering student at the National University of Mongolia, with international experience as an exchange student at Chungbuk National University in South Korea. I led a team of 4–5 developers to build and launch the Magic Code AI website, and completed an internship at MCS Technologies LLC.</p>
+          <p data-i18n="about.p2">My interests are software development, front-end development, software testing, and AI-based applications.</p>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
-      <h2><span class="num">02</span> Featured projects</h2>
-      <div class="cards">
-        <article class="card">
-          <p class="role">Team Lead &amp; Full-Stack Developer</p>
-          <h3>Magic Code AI — company website</h3>
-          <ul>
-            <li>Led a team of 4–5 developers: planned the work, coordinated tasks, and followed progress through to launch.</li>
-            <li>Built the site hands-on across both the front end and the back end.</li>
-            <li>Delivered a live, responsive website presenting the team's IT training and website development services on phone, tablet, and desktop.</li>
-          </ul>
-          <a class="btn" href="https://www.mci.mn/" target="_blank" rel="noopener">mci.mn ↗</a>
-        </article>
-        <article class="card">
-          <p class="role">Open-source team project · Chungbuk National University</p>
-          <h3>Recifridge — AI smart refrigerator manager</h3>
-          <ul>
-            <li>Built with students I met during my exchange programme.</li>
-            <li>Lets users manage their groceries and receive AI-generated recipe recommendations.</li>
-            <li>Includes an AI assistant for cooking advice and a health dashboard that tracks nutrition information.</li>
-          </ul>
-        </article>
+      <div class="wrap cols reveal">
+        <h2 data-i18n="projects.title">Projects</h2>
+        <div>
+          <article class="project">
+            <h3 data-i18n="p1.title">Magic Code AI company website</h3>
+            <p class="where" data-i18n="p1.role">Team lead and full-stack developer</p>
+            <ul>
+              <li data-i18n="p1.b1">Led a team of 4–5 developers: planned the work, coordinated tasks, and followed progress through to launch.</li>
+              <li data-i18n="p1.b2">Built the site hands-on across both the front end and the back end.</li>
+              <li data-i18n="p1.b3">Delivered a live, responsive website presenting the team's IT training and website development services on phone, tablet, and desktop.</li>
+            </ul>
+            <a class="visit" href="https://www.mci.mn/" target="_blank" rel="noopener" data-i18n="p1.visit">Visit mci.mn</a>
+          </article>
+          <article class="project">
+            <h3 data-i18n="p2.title">Recifridge, an AI-based smart refrigerator manager</h3>
+            <p class="where" data-i18n="p2.role">Open-source team project, Chungbuk National University</p>
+            <ul>
+              <li data-i18n="p2.b1">Developed with students I met during the exchange programme.</li>
+              <li data-i18n="p2.b2">Lets users manage their groceries and receive AI-generated recipe recommendations.</li>
+              <li data-i18n="p2.b3">Includes an AI assistant that gives cooking advice and a health dashboard that tracks nutrition information.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="experience">
-      <h2><span class="num">03</span> Experience</h2>
-      <ol class="timeline">
-        <li>
-          <time>Jun 2026 – Jul 2026</time>
-          <div>
-            <h3>Intern</h3>
-            <p class="issuer">MCS Technologies LLC · Ulaanbaatar, Mongolia</p>
-            <p>Gained practical industry experience in a professional work environment and developed technical and professional skills.</p>
+      <div class="wrap cols reveal">
+        <h2 data-i18n="exp.title">Experience</h2>
+        <div>
+          <div class="item">
+            <p class="when" data-i18n="e1.when">Jun – Jul 2026</p>
+            <div>
+              <h3 data-i18n="e1.title">Intern</h3>
+              <p class="where" data-i18n="e1.where">MCS Technologies LLC, Ulaanbaatar</p>
+              <p data-i18n="e1.desc">Gained practical industry experience in a professional work environment and developed technical and professional skills.</p>
+            </div>
           </div>
-        </li>
-        <li>
-          <time>Jun 2025 – Aug 2025</time>
-          <div>
-            <h3>Beta Tester <span class="soft">(contract)</span></h3>
-            <p class="issuer">Education Information Technology Center</p>
-            <ul>
-              <li>Tested the fin.esis.edu.mn and esis.edu.mn websites.</li>
-              <li>Wrote a user guide.</li>
-              <li>Answered citizens' enquiries by phone and chat and resolved user complaints.</li>
-              <li>Prepared reports on testing and support work.</li>
-            </ul>
+          <div class="item">
+            <p class="when" data-i18n="e2.when">Jun – Aug 2025</p>
+            <div>
+              <h3 data-i18n="e2.title">Beta tester <span class="note">(contract)</span></h3>
+              <p class="where" data-i18n="e2.where">Education Information Technology Center</p>
+              <ul>
+                <li data-i18n="e2.b1">Tested the fin.esis.edu.mn and esis.edu.mn websites.</li>
+                <li data-i18n="e2.b2">Wrote a user guide.</li>
+                <li data-i18n="e2.b3">Answered citizens' enquiries by phone and chat and resolved user complaints.</li>
+                <li data-i18n="e2.b4">Prepared reports.</li>
+              </ul>
+            </div>
           </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="education">
-      <h2><span class="num">04</span> Education</h2>
-      <ol class="timeline">
-        <li>
-          <time>2023 – 2027</time>
-          <div>
-            <h3>National University of Mongolia</h3>
-            <p class="issuer">Bachelor's degree, Software Engineering</p>
-            <p>GPA 4.25 / 4.5</p>
-          </div>
-        </li>
-        <li>
-          <time>Spring 2026</time>
-          <div>
-            <h3>Chungbuk National University, South Korea</h3>
-            <p class="issuer">Exchange student, Software</p>
-            <p>GPA 3.6 / 4.0</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="skills">
-      <h2><span class="num">05</span> Skills</h2>
-      <div class="skillgrid">
-        <div>
-          <h3>Programming &amp; web</h3>
-          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>C</li><li>C++</li><li>Front-end development</li></ul>
-        </div>
-        <div>
-          <h3>Data &amp; databases</h3>
-          <ul class="tags"><li>PostgreSQL</li><li>NoSQL</li><li>GNU Octave</li></ul>
-        </div>
-        <div>
-          <h3>Design &amp; fabrication</h3>
-          <ul class="tags"><li>FreeCAD</li><li>CorelDRAW</li><li>3D printing</li><li>Laser cutting</li><li>Laser engraving</li></ul>
-        </div>
-        <div>
-          <h3>Professional</h3>
-          <ul class="tags"><li>Software testing</li><li>Report writing</li><li>Customer communication</li><li>Problem solving</li><li>Teamwork</li><li>Team leadership</li></ul>
-        </div>
-        <div>
-          <h3>Languages</h3>
-          <ul class="tags"><li>Mongolian (native)</li><li>English</li></ul>
         </div>
       </div>
     </section>
 
-    <section id="certificates">
-      <h2><span class="num">06</span> Certificates</h2>
-      <ol class="timeline">
-        <li>
-          <time datetime="2026">2026</time>
-          <div>
-            <h3>UNCCD COP17 — Certificate of Recognition</h3>
-            <p class="issuer">Vertical Harvest · UNCCD COP17, Ulaanbaatar</p>
-            <p>Recognised for contributing to the organization and facilitation of international communication and cooperation during the UNCCD COP17 international event, using English language skills.</p>
+    <section id="education">
+      <div class="wrap cols reveal">
+        <h2 data-i18n="edu.title">Education</h2>
+        <div>
+          <div class="item">
+            <p class="when">2023 – 2027</p>
+            <div>
+              <h3 data-i18n="d1.title">National University of Mongolia</h3>
+              <p class="where" data-i18n="d1.where">Bachelor's degree, Software Engineering</p>
+              <p data-i18n="d1.desc">GPA 4.25 / 4.5</p>
+            </div>
           </div>
-        </li>
-        <li>
-          <time datetime="2025-05-16">16 May 2025</time>
-          <div>
-            <h3>Linux Essentials</h3>
-            <p class="issuer">Cisco Networking Academy</p>
-            <p>Core Linux knowledge: the command line, files and permissions, users, and basic system administration.</p>
+          <div class="item">
+            <p class="when" data-i18n="d2.when">Spring 2026</p>
+            <div>
+              <h3 data-i18n="d2.title">Chungbuk National University, South Korea</h3>
+              <p class="where" data-i18n="d2.where">Exchange student, Software</p>
+              <p data-i18n="d2.desc">GPA 3.6 / 4.0</p>
+            </div>
           </div>
-        </li>
-        <li>
-          <time datetime="2025-03-27">27 Mar 2025</time>
-          <div>
-            <h3>Linux Unhatched</h3>
-            <p class="issuer">Cisco Networking Academy</p>
-            <p>Introductory course covering first steps in the Linux shell and everyday commands.</p>
-          </div>
-        </li>
-        <li>
-          <time datetime="2024-05-07">7 May 2024</time>
-          <div>
-            <h3>ClimateScience Olympiad 2024</h3>
-            <p class="issuer">ClimateScience · Certificate of Participation in Qualifiers</p>
-            <p>Took part in the qualifying round of the international climate problem-solving competition.</p>
-          </div>
-        </li>
-      </ol>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2><span class="num">07</span> Contact</h2>
-      <p>Open to internships, junior roles and collaboration on web and AI projects. The best way to reach me is through GitHub.</p>
-      <p><a class="btn solid" href="https://github.com/tergeln" target="_blank" rel="noopener">github.com/tergeln ↗</a></p>
+    <section id="skills">
+      <div class="wrap cols reveal">
+        <h2 data-i18n="skills.title">Skills</h2>
+        <dl class="skills">
+          <div><dt data-i18n="s1.k">Programming and web</dt><dd data-i18n="s1.v">HTML, CSS, JavaScript, TypeScript, Python, C, C++, front-end development</dd></div>
+          <div><dt data-i18n="s2.k">Data and databases</dt><dd>PostgreSQL, NoSQL, GNU Octave</dd></div>
+          <div><dt data-i18n="s3.k">Design and fabrication</dt><dd data-i18n="s3.v">FreeCAD, CorelDRAW, 3D printing, laser cutting, laser engraving</dd></div>
+          <div><dt data-i18n="s4.k">Professional</dt><dd data-i18n="s4.v">Software testing, report writing, customer communication, problem solving, teamwork, team leadership</dd></div>
+          <div><dt data-i18n="s5.k">Languages</dt><dd data-i18n="s5.v">Mongolian (native), English</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <div class="wrap cols reveal">
+        <h2 data-i18n="cert.title">Certificates</h2>
+        <div>
+          <div class="item">
+            <p class="when">2026</p>
+            <div>
+              <h3 data-i18n="c1.title">UNCCD COP17 certificate of recognition</h3>
+              <p class="where" data-i18n="c1.where">Vertical Harvest, Ulaanbaatar</p>
+              <p data-i18n="c1.desc">For contributing to the organization and facilitation of international communication and cooperation during the UNCCD COP17 international event, using English language skills.</p>
+            </div>
+          </div>
+          <div class="item">
+            <p class="when" data-i18n="c2.when">16 May 2025</p>
+            <div>
+              <h3>Linux Essentials</h3>
+              <p class="where">Cisco Networking Academy</p>
+              <p data-i18n="c2.desc">Core Linux knowledge: the command line, files and permissions, users, and basic system administration.</p>
+            </div>
+          </div>
+          <div class="item">
+            <p class="when" data-i18n="c3.when">27 Mar 2025</p>
+            <div>
+              <h3>Linux Unhatched</h3>
+              <p class="where">Cisco Networking Academy</p>
+              <p data-i18n="c3.desc">Introductory course covering first steps in the Linux shell and everyday commands.</p>
+            </div>
+          </div>
+          <div class="item">
+            <p class="when" data-i18n="c4.when">7 May 2024</p>
+            <div>
+              <h3 data-i18n="c4.title">ClimateScience Olympiad 2024</h3>
+              <p class="where" data-i18n="c4.where">Certificate of participation in qualifiers</p>
+              <p data-i18n="c4.desc">Took part in the qualifying round of the international climate problem-solving competition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap cols reveal">
+        <h2 data-i18n="contact.title">Contact</h2>
+        <div>
+          <p data-i18n="contact.text">Email is the quickest way to reach me.</p>
+          <a class="mail" href="mailto:tergeln26@gmail.com">tergeln26@gmail.com</a>
+          <ul class="socials">
+            <li><a href="https://www.linkedin.com/in/tergel-nyamlkhagva-50710429a/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/tergeln" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.instagram.com/tergel__n/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/nyamlkhagva.tergel" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year">2026</span> Tergel Nyamlkhagva · Ulaanbaatar, Mongolia</p>
+    <div class="wrap"><p>© <span id="year">2026</span> Tergel Nyamlkhagva, <span data-i18n="footer.place">Ulaanbaatar, Mongolia</span></p></div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
 </body>
 </html>
