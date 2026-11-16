@@ -136,7 +136,6 @@ p { margin: 0 0 1rem; }
 .skills dt { color: var(--soft); font-size: .95rem; padding-top: .1rem; }
 .skills dd { margin: 0; }
 
-.legend { color: var(--soft); font-size: .95rem; }
 .works { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem 1rem; margin-top: 1.8rem; }
 .works figure { margin: 0; }
 .sheet { aspect-ratio: 1; background: var(--paper); padding: 5%; overflow: hidden; transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; }
