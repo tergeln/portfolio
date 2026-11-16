@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio of Tergel Nyamkhlagva: a single static page (`index.html` + `styles.css`), no build step.
+Personal portfolio of Tergel Nyamlkhagva: a single static page (`index.html` + `styles.css`), no build step.
 
 ## View locally
 
