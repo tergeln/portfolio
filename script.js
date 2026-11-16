@@ -96,7 +96,7 @@
   menuBtn.addEventListener('click', function () { setMenu(!top.classList.contains('open')); });
   document.querySelectorAll('.top nav a, .brand').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-  window.addEventListener('resize', function () { if (window.innerWidth > 860) setMenu(false); });
+  document.addEventListener('click', function (e) { if (!top.contains(e.target)) setMenu(false); });
   function onScroll() { top.classList.toggle('scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
