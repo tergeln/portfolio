@@ -35,7 +35,7 @@ a:hover { color: var(--gate); }
 .top.scrolled { background: rgba(237, 241, 244, .92); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--rule); }
 .top .wrap { display: flex; align-items: center; gap: 1rem 1.5rem; flex-wrap: wrap; padding-top: .8rem; padding-bottom: .8rem; }
 .brand { font-family: var(--display); font-weight: 600; font-size: .95rem; color: var(--ink); text-decoration: none; margin-right: auto; }
-.top nav { display: none; position: absolute; top: calc(100% + .2rem); right: max(clamp(1.1rem, 4vw, 2.5rem), calc(50% - 560px + 2.5rem)); width: 15rem; flex-direction: column; padding: .35rem 1.25rem; font-size: 1rem; background: rgba(245, 247, 249, .98); border-radius: 14px; box-shadow: 0 20px 44px -18px rgba(19, 33, 46, .65); }
+.top nav { display: none; position: absolute; top: calc(100% + .2rem); right: max(clamp(1.1rem, 4vw, 2.5rem), calc(50% - 560px + 2.5rem)); width: 15rem; flex-direction: column; padding: .35rem 1.25rem; font-size: 1rem; background: #f5f7f9; border-radius: 14px; box-shadow: 0 20px 44px -18px rgba(19, 33, 46, .65); }
 .top.open nav { display: flex; animation: rise .28s cubic-bezier(.2, .7, .2, 1) both; }
 .top nav a { color: var(--ink); text-decoration: none; padding: .7rem 0; border-top: 1px solid var(--rule); transition: color .2s, padding-left .2s; }
 .top nav a:first-child { border-top: 0; }
@@ -179,8 +179,8 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 
   .hero .wrap { grid-template-columns: 1fr; }
   .prints { justify-self: center; max-width: 440px; margin-top: 1rem; order: 0; }
   .cols { grid-template-columns: 1fr; }
-  .top nav { top: 100%; left: 0; right: 0; width: auto; padding: 0 clamp(1.1rem, 4vw, 2.5rem) .6rem; font-size: 1.05rem; border-radius: 0; background: rgba(237, 241, 244, .97); box-shadow: 0 14px 24px -14px rgba(19, 33, 46, .5); }
-  .top.open { background: rgba(237, 241, 244, .97); backdrop-filter: none; box-shadow: none; }
+  .top nav { top: 100%; left: 0; right: 0; width: auto; padding: 0 clamp(1.1rem, 4vw, 2.5rem) .6rem; font-size: 1.05rem; border-radius: 0; background: #edf1f4; box-shadow: 0 14px 24px -14px rgba(19, 33, 46, .5); }
+  .top.open { background: #edf1f4; backdrop-filter: none; box-shadow: none; }
   .top.open:not(.scrolled) .brand, .top.open:not(.scrolled) .menu-btn { color: var(--ink); }
 }
 @media (max-width: 560px) {
