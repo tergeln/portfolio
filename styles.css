@@ -43,7 +43,7 @@ a:hover { color: var(--gate); }
 .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 
 /* hero */
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem 2.5rem; align-items: center; padding-top: clamp(2.5rem, 7vw, 5.5rem); padding-bottom: clamp(3.5rem, 8vw, 6.5rem); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem 4rem; align-items: center; padding-top: clamp(2.5rem, 7vw, 5.5rem); padding-bottom: clamp(3.5rem, 8vw, 6.5rem); }
 .hero h1 { font-family: var(--display); font-weight: 650; font-size: clamp(1.9rem, 4.3vw, 3.25rem); line-height: 1.1; letter-spacing: -.03em; margin: 0 0 1.5rem; }
 .hero h1 span { display: block; }
 .lead { font-size: 1.2rem; line-height: 1.55; color: var(--soft); max-width: 31rem; margin: 0 0 2rem; }
@@ -59,7 +59,7 @@ a:hover { color: var(--gate); }
 @keyframes ping { from { transform: scale(1); opacity: .6; } 70%, to { transform: scale(2.8); opacity: 0; } }
 
 /* photo prints */
-.prints { position: relative; aspect-ratio: 1 / .72; max-width: 580px; width: 100%; justify-self: end; }
+.prints { position: relative; aspect-ratio: 1 / .72; max-width: 580px; width: 100%; justify-self: start; order: -1; }
 .print { position: absolute; width: 40%; margin: 0; padding: 7px; background: var(--paper); box-shadow: 0 14px 34px -14px rgba(19, 33, 46, .55); transform: rotate(var(--r)); transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s; }
 .print img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
 .print.p1 { --r: -5deg; left: 0; top: 12%; z-index: 1; }
@@ -141,7 +141,7 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 
 
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; }
-  .prints { justify-self: center; max-width: 440px; margin-top: 1rem; }
+  .prints { justify-self: center; max-width: 440px; margin-top: 1rem; order: 0; }
   .cols { grid-template-columns: 1fr; }
   .top nav { order: 3; width: 100%; flex-wrap: nowrap; gap: 1.2rem; overflow-x: auto; white-space: nowrap; scrollbar-width: none; padding-bottom: .2rem; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
   .top nav::-webkit-scrollbar { display: none; }
