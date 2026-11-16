@@ -42,6 +42,13 @@ a:hover { color: var(--gate); }
 .lang button { font: 600 .8rem/1 var(--body); border: 0; background: none; color: var(--soft); padding: .4rem .7rem; border-radius: 999px; cursor: pointer; transition: background .2s, color .2s; }
 .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 
+.menu-btn { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 2.6rem; height: 2.6rem; padding: 0 .6rem; border: 0; border-radius: 999px; background: none; color: var(--ink); cursor: pointer; }
+.menu-btn span { display: block; height: 2px; border-radius: 2px; background: currentColor; transition: transform .25s, opacity .2s; }
+.top.open .menu-btn span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.top.open .menu-btn span:nth-child(2) { opacity: 0; }
+.top.open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.top:not(.scrolled):not(.open) .menu-btn { color: #fff; }
+
 /* night sky, full moon and water ("Tergel" means full moon) */
 .hero { position: relative; color: #fff; }
 .sky { --moon: clamp(8.5rem, 17vw, 16rem); --moon-right: max(1.25rem, calc(50% - 36rem)); position: absolute; inset: -8rem 0 0 0; overflow: hidden; pointer-events: none;
@@ -72,7 +79,7 @@ a:hover { color: var(--gate); }
 .hero .btn:not(.primary) { border-color: rgba(255, 255, 255, .7); color: #fff; }
 .hero .btn:not(.primary):hover { background: #fff; color: var(--ink); border-color: #fff; }
 .hero .btn.primary:hover { background: #fff; border-color: #fff; color: var(--ink); }
-.top:not(.scrolled) .brand { color: #fff; }
+.top:not(.scrolled):not(.open) .brand { color: #fff; }
 .top:not(.scrolled) nav a { color: #c9d6e6; }
 .top:not(.scrolled) nav a:hover, .top:not(.scrolled) nav a:focus-visible { color: #fff; }
 
@@ -172,13 +179,16 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 
   .hero .wrap { grid-template-columns: 1fr; }
   .prints { justify-self: center; max-width: 440px; margin-top: 1rem; order: 0; }
   .cols { grid-template-columns: 1fr; }
-  .top nav { order: 3; width: 100%; flex-wrap: nowrap; gap: 1.2rem; overflow-x: auto; white-space: nowrap; scrollbar-width: none; padding-bottom: .2rem; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
-  .top nav::-webkit-scrollbar { display: none; }
-  .top nav a:last-child { padding-right: 2rem; }
+  .menu-btn { display: inline-flex; }
+  .top nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; padding: 0 clamp(1.1rem, 4vw, 2.5rem) .6rem; font-size: 1.05rem; background: rgba(237, 241, 244, .97); backdrop-filter: blur(10px); box-shadow: 0 14px 24px -14px rgba(19, 33, 46, .5); }
+  .top.open nav { display: flex; animation: rise .28s cubic-bezier(.2, .7, .2, 1) both; }
+  .top nav a { padding: .8rem 0; border-top: 1px solid var(--rule); background: none; }
+  .top.open { background: rgba(237, 241, 244, .97); backdrop-filter: none; box-shadow: none; }
+  .top.open .brand, .top.open .menu-btn { color: var(--ink); }
+  .top.open nav a, .top.open:not(.scrolled) nav a { color: var(--ink); }
 }
 @media (max-width: 560px) {
   .hero h1 { font-size: clamp(1.7rem, 8.6vw, 2.4rem); }
-  .top nav { font-size: .9rem; }
   .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .item, .skills div { grid-template-columns: 1fr; }
 }
