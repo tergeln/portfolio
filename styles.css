@@ -53,11 +53,6 @@ a:hover { color: var(--gate); }
 .btn.primary { background: var(--gate); border-color: var(--gate); color: #fff; }
 .btn.primary:hover { background: var(--ink); border-color: var(--ink); }
 
-.status { display: inline-flex; align-items: center; gap: .6rem; margin: 0 0 1.4rem; padding: .4rem .9rem .4rem .75rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 999px; font-size: .92rem; font-weight: 500; animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
-.dot { position: relative; width: .55rem; height: .55rem; border-radius: 50%; background: var(--sea); flex: none; }
-.dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--sea); animation: ping 2.2s ease-out infinite; }
-@keyframes ping { from { transform: scale(1); opacity: .6; } 70%, to { transform: scale(2.8); opacity: 0; } }
-
 /* photo prints */
 .prints { position: relative; aspect-ratio: 1 / .72; max-width: 580px; width: 100%; justify-self: start; order: -1; }
 .print { position: absolute; width: 40%; margin: 0; padding: 7px; background: var(--paper); box-shadow: 0 14px 34px -14px rgba(19, 33, 46, .55); transform: rotate(var(--r)); transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s; }
@@ -127,8 +122,7 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 
 @keyframes rise { from { opacity: 0; transform: translateY(1.1em); } to { opacity: 1; transform: none; } }
 @keyframes deal { from { opacity: 0; transform: translate(var(--dx), 26%) rotate(0deg) scale(.86); } to { opacity: 1; transform: rotate(var(--r)); } }
 .hero h1 span, .hero .lead, .hero .actions { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
-.hero h1 span:nth-child(1) { animation-delay: .08s; }
-.hero h1 span:nth-child(2) { animation-delay: .16s; }
+.hero h1 span:nth-child(2) { animation-delay: .09s; }
 .hero .lead { animation-delay: .22s; }
 .hero .actions { animation-delay: .32s; }
 .print { animation: deal .9s cubic-bezier(.2, .8, .2, 1) both; }
