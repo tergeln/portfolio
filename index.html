@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tergel Nyamkhlagva — Portfolio</title>
+  <meta name="description" content="Portfolio of Tergel Nyamkhlagva: Linux learner, Cisco Networking Academy certificates and ClimateScience Olympiad participant.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#home">tergel<span>@</span>portfolio<span>:~$</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <p class="prompt">$ whoami</p>
+      <h1>Tergel<br>Nyamkhlagva</h1>
+      <p class="lead">Learning Linux and networking from the command line up, one certificate and one project at a time.</p>
+      <div class="actions">
+        <a class="btn solid" href="#certificates">View certificates</a>
+        <a class="btn" href="https://github.com/tergeln" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2><span class="num">01</span> About</h2>
+      <p>I'm Tergel. I enjoy understanding how computers work underneath the interface: the shell, the file system, and the networks that connect machines together. I've completed Cisco Networking Academy's Linux courses and took part in the ClimateScience Olympiad qualifiers.</p>
+      <p>This site collects what I've learned so far. More projects will appear here as I build them.</p>
+    </section>
+
+    <section id="certificates">
+      <h2><span class="num">02</span> Certificates</h2>
+      <ol class="certs">
+        <li>
+          <time datetime="2025-05-16">16 May 2025</time>
+          <div>
+            <h3>Linux Essentials</h3>
+            <p class="issuer">Cisco Networking Academy</p>
+            <p>Core Linux knowledge: the command line, files and permissions, users, and basic system administration.</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2025-03-27">27 Mar 2025</time>
+          <div>
+            <h3>Linux Unhatched</h3>
+            <p class="issuer">Cisco Networking Academy</p>
+            <p>Introductory course covering first steps in the Linux shell and everyday commands.</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2024-05-07">7 May 2024</time>
+          <div>
+            <h3>ClimateScience Olympiad 2024</h3>
+            <p class="issuer">ClimateScience — Certificate of Participation in Qualifiers</p>
+            <p>Took part in the qualifying round of the international climate problem-solving competition.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills">
+      <h2><span class="num">03</span> Skills</h2>
+      <ul class="tags">
+        <li>Linux command line</li>
+        <li>Files &amp; permissions</li>
+        <li>Shell basics</li>
+        <li>Networking fundamentals</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">04</span> Contact</h2>
+      <p>The best way to reach me is through GitHub.</p>
+      <p><a class="btn solid" href="https://github.com/tergeln" target="_blank" rel="noopener">github.com/tergeln ↗</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> Tergel Nyamkhlagva</p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
