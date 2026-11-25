@@ -69,22 +69,7 @@
     document.title = titles[lang];
     buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     try { localStorage.setItem('lang', lang); } catch (e) {}
-    chipify();
   }
-  // skills shown as small chips (rebuilt after each language switch)
-  function chipify() {
-    document.querySelectorAll('.skills dd').forEach(function (dd) {
-      if (dd.querySelector('.chip')) return;
-      var parts = dd.textContent.split(/,\s*/).filter(Boolean);
-      dd.innerHTML = '';
-      parts.forEach(function (t, k) {
-        var c = document.createElement('span');
-        c.className = 'chip'; c.textContent = t; c.style.setProperty('--c', k);
-        dd.appendChild(c);
-      });
-    });
-  }
-  chipify();
   buttons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang, true); }); });
   var saved = null;
   try { saved = localStorage.getItem('lang'); } catch (e) {}
