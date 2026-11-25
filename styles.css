@@ -84,8 +84,8 @@ a:hover { color: var(--accent); }
 
 /* ---------- hero ---------- */
 .hero { position: relative; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 1rem 3rem; align-items: end; min-height: calc(100svh - 4.2rem); padding-top: 2rem; padding-bottom: 0; }
-.hero-text { align-self: center; padding-bottom: 3rem; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 1rem 3rem; align-items: center; min-height: calc(100svh - 4.2rem); padding-top: 2rem; padding-bottom: 2rem; }
+.hero-text { align-self: center; }
 .hello { margin: 0 0 1rem; font-size: 1.05rem; font-weight: 600; color: var(--accent); }
 .hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 4.3vw, 3.5rem); line-height: 1.05; letter-spacing: -.02em; text-transform: uppercase; margin: 0 0 1.4rem; }
 .hero h1 span { display: block; }
@@ -95,9 +95,10 @@ a:hover { color: var(--accent); }
 .btn:hover { background: var(--text); color: var(--bg); transform: translateY(-2px); }
 .btn.ghost { border-color: transparent; }
 .btn.ghost:hover { background: transparent; color: var(--accent); }
-.portrait { position: relative; align-self: end; justify-self: center; width: min(100%, 400px); display: flex; flex-direction: column; align-items: center; }
-.stage { position: relative; display: block; width: 100%; aspect-ratio: 622 / 900; max-height: calc(100svh - 9rem); padding: 0; border: 0; background: none; cursor: pointer; }
-.me { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: bottom; opacity: 0; pointer-events: none; filter: drop-shadow(0 18px 30px var(--shadow)); transform-origin: 50% 100%; transition: opacity .25s; }
+.portrait { position: relative; align-self: center; justify-self: center; width: min(100%, 380px); display: flex; flex-direction: column; align-items: center; }
+.stage { position: relative; display: block; width: 100%; aspect-ratio: 3 / 4; padding: 0; border: 0; border-radius: 24px; background: var(--surface); cursor: pointer; transform: rotate(-2deg); box-shadow: 0 30px 60px -28px var(--shadow); transition: transform .4s cubic-bezier(.3, 1.5, .5, 1); }
+.stage:hover { transform: rotate(1deg) scale(1.02); }
+.me { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 24px; opacity: 0; pointer-events: none; transform-origin: 50% 100%; transition: opacity .25s; }
 .me.on { opacity: 1; animation: boing .75s cubic-bezier(.3, 1.5, .5, 1) both; }
 .stage:hover .me.on { animation: wiggle .5s ease-in-out; }
 @keyframes boing { 0% { opacity: 0; transform: scale(.55) rotate(-10deg); } 60% { opacity: 1; transform: scale(1.06) rotate(3deg); } 100% { opacity: 1; transform: none; } }
