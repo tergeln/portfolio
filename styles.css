@@ -93,6 +93,16 @@ a:hover { color: var(--accent); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .btn.primary:hover { background: var(--text); border-color: var(--text); color: var(--bg); }
 
+.hero { position: relative; }
+.hero .wrap { min-height: calc(100svh - 4.2rem); }
+.hero-links { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.6rem 0 0; padding: 0; }
+.hero-links a { display: inline-block; padding: .4rem .9rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: .9rem; text-decoration: none; transition: color .2s, border-color .2s, transform .2s; }
+.hero-links a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.scroll-cue { position: absolute; left: 50%; bottom: 1.6rem; width: 1.6rem; height: 2.5rem; margin-left: -.8rem; border: 1.5px solid var(--muted); border-radius: 999px; opacity: .7; transition: opacity .2s; }
+.scroll-cue:hover { opacity: 1; }
+.scroll-cue span { position: absolute; left: 50%; top: .45rem; width: 4px; height: 7px; margin-left: -2px; border-radius: 2px; background: var(--muted); animation: cue 1.8s ease-in-out infinite; }
+@keyframes cue { 0% { opacity: 0; transform: translateY(0); } 30% { opacity: 1; } 80% { opacity: 0; transform: translateY(12px); } 100% { opacity: 0; } }
+
 /* photo prints */
 .prints { position: relative; aspect-ratio: 1 / .72; max-width: 580px; width: 100%; justify-self: start; order: -1; }
 .print { position: absolute; width: 40%; margin: 0; padding: 7px; background: #fff; box-shadow: 0 14px 34px -14px var(--shadow); transform: rotate(var(--r)); transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s; }
@@ -158,11 +168,12 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid var(--panel-lin
 
 /* ---------- motion ---------- */
 @keyframes rise { from { opacity: 0; transform: translateY(1.1em); } to { opacity: 1; transform: none; } }
-.hero h1 span, .hero .lead, .hero .actions { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
+.hero h1 span, .hero .lead, .hero .actions, .hero-links { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
 .hero h1 span:nth-child(1) { animation-delay: .25s; }
 .hero h1 span:nth-child(2) { animation-delay: .35s; }
 .hero .lead { animation-delay: .5s; }
 .hero .actions { animation-delay: .62s; }
+.hero-links { animation-delay: .74s; }
 @keyframes deal { from { opacity: 0; transform: translate(var(--dx), 26%) rotate(0deg) scale(.86); } to { opacity: 1; transform: rotate(var(--r)); } }
 .print { animation: deal .9s cubic-bezier(.2, .8, .2, 1) both; }
 .print.p1 { --dx: 75%; animation-delay: .35s; }
@@ -179,6 +190,7 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid var(--panel-lin
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .prints { justify-self: center; max-width: 440px; margin-top: 1rem; order: 0; }
+  .hero .wrap { min-height: 0; padding-bottom: 5.5rem; }
   .cols { grid-template-columns: 1fr; }
   .top nav { top: 100%; left: 0; right: 0; width: auto; padding: 0 clamp(1.1rem, 4vw, 2.5rem) .6rem; font-size: 1.05rem; border-radius: 0; border-width: 0 0 1px; background: var(--bg); box-shadow: 0 14px 24px -14px var(--shadow); }
 }
