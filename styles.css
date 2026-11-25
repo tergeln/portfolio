@@ -130,13 +130,11 @@ p { margin: 0 0 1rem; }
 .project .visit { display: inline-block; margin-top: .9rem; font-weight: 600; }
 
 .skills { margin: 0; }
-.skills > div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: .5rem 1.5rem; padding: 1rem 0; border-top: 1px solid var(--line); }
+.skills > div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: .2rem 1.5rem; padding: 1rem 0; border-top: 1px solid var(--line); }
 .skills > div:first-child { border-top: 0; padding-top: 0; }
 .skills > div:last-child { padding-bottom: 0; }
-.skills dt { color: var(--muted); font-size: .95rem; padding-top: .3rem; }
-.skills dd { margin: 0; display: flex; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: .45rem; }
-.chip { display: inline-block; line-height: 1.3; padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: .92rem; transition: border-color .2s, color .2s, transform .2s; }
-.chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.skills dt { color: var(--muted); font-size: .95rem; padding-top: .1rem; }
+.skills dd { margin: 0; }
 
 .works { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.8rem; }
 .works figure { margin: 0; }
@@ -176,11 +174,8 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid var(--panel-lin
 .js .reveal h2 { opacity: 0; transform: translateX(-18px); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }
 .js .reveal h2::after { transform: scaleX(0); transition: transform .7s .25s cubic-bezier(.2, .7, .2, 1); }
 .js .reveal .stagger { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--i, 0) * 80ms + 120ms); }
-.js .reveal .chip { opacity: 0; transform: scale(.85); transition: opacity .35s ease, transform .35s cubic-bezier(.3, 1.4, .5, 1), border-color .2s, color .2s; transition-delay: calc(var(--c, 0) * 30ms + 250ms); }
 .js .reveal.in h2, .js .reveal.in .stagger { opacity: 1; transform: none; }
 .js .reveal.in h2::after { transform: scaleX(1); }
-.js .reveal.in .chip { opacity: 1; transform: none; }
-.js .reveal.in .chip:hover { transform: translateY(-2px); transition-delay: 0s; }
 .swap { animation: rise .35s ease both; }
 
 /* ---------- responsive ---------- */
@@ -199,6 +194,6 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid var(--panel-lin
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js .reveal h2, .js .reveal .stagger, .js .reveal .chip { opacity: 1; transform: none; }
+  .js .reveal h2, .js .reveal .stagger { opacity: 1; transform: none; }
   .js .reveal h2::after { transform: none; }
 }
