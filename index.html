@@ -6,10 +6,12 @@
   <title>Tergel Nyamlkhagva, software engineering student</title>
   <meta name="description" content="Portfolio of Tergel Nyamlkhagva, software engineering student at the National University of Mongolia: projects, experience, skills and certificates.">
   <link rel="preload" href="assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light';}</script>
 </head>
 <body>
+  <div class="progress" aria-hidden="true"></div>
   <header class="top">
     <div class="wrap">
       <a class="brand" href="#home">Tergel N.</a>
@@ -27,38 +29,34 @@
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" data-lang="mn" aria-pressed="false">МН</button>
       </div>
+      <button type="button" class="theme-btn" aria-label="Switch light or dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="sun" cx="12" cy="12" r="4.2"/><g class="rays"><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g><path class="crescent" d="M20.5 13.2A8.6 8.6 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"/></svg></button>
       <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main>
     <section id="home" class="hero">
-      <div class="sky" aria-hidden="true">
-        <div class="stars"></div>
-        <svg class="moon" viewBox="0 0 400 400">
-          <defs>
-            <radialGradient id="moon-light" cx="40%" cy="36%" r="68%"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#e3e9f2"/><stop offset="1" stop-color="#9fadc6"/></radialGradient>
-            <filter id="moon-seas" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="5" seed="11"/><feColorMatrix values="0 0 0 0 .30  0 0 0 0 .36  0 0 0 0 .50  1.9 0 0 0 -.72"/></filter>
-            <clipPath id="moon-disc"><circle cx="200" cy="200" r="190"/></clipPath>
-          </defs>
-          <circle cx="200" cy="200" r="190" fill="url(#moon-light)"/>
-          <g clip-path="url(#moon-disc)"><rect width="400" height="400" filter="url(#moon-seas)" opacity=".8"/></g>
-        </svg>
-        <div class="water"></div>
-      </div>
       <div class="wrap">
-        <div>
+        <div class="hero-photo">
+          <div class="moon" aria-hidden="true"></div>
+          <div class="frame">
+            <img class="slide" src="assets/photo-campus.jpg" width="900" height="1200" alt="alt.campus" data-i18n-alt="alt.campus">
+            <img class="slide" src="assets/photo-sea.jpg" width="900" height="1200" alt="alt.sea" data-i18n-alt="alt.sea">
+            <img class="slide" src="assets/photo-gate.jpg" width="900" height="1200" alt="alt.gate" data-i18n-alt="alt.gate">
+          </div>
+        </div>
+        <div class="hero-text">
           <h1><span>Tergel</span><span>Nyamlkhagva</span></h1>
           <p class="lead" data-i18n="hero.lead">Hello, nice to meet you!</p>
           <div class="actions">
             <a class="btn primary" href="#contact" data-i18n="hero.contact">Get in touch</a>
             <a class="btn" href="#projects" data-i18n="hero.work">See my projects</a>
           </div>
-        </div>
-        <div class="prints">
-          <figure class="print p1"><img src="assets/photo-sea.jpg" width="900" height="1200" alt="Tergel wrapped in a green plaid blanket in front of a stormy sea" data-i18n-alt="alt.sea"></figure>
-          <figure class="print p2"><img src="assets/photo-campus.jpg" width="900" height="1200" alt="Tergel standing by a pond on a university campus under a blue sky" data-i18n-alt="alt.campus"></figure>
-          <figure class="print p3"><img src="assets/photo-gate.jpg" width="900" height="1200" alt="Tergel balancing on one leg in front of a red wooden gate painted with a red and blue circle" data-i18n-alt="alt.gate"></figure>
+          <ul class="hero-links">
+            <li><a href="mailto:tergeln26@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/tergel-nyamlkhagva-50710429a/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/tergeln" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
         </div>
       </div>
     </section>
