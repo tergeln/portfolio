@@ -136,7 +136,7 @@ p { margin: 0 0 1rem; }
 .skills dt { color: var(--soft); font-size: .95rem; padding-top: .1rem; }
 .skills dd { margin: 0; }
 
-.works { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem 1rem; margin-top: 1.8rem; }
+.works { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.8rem; }
 .works figure { margin: 0; }
 .sheet { aspect-ratio: 1; background: var(--paper); padding: 5%; overflow: hidden; transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; }
 .sheet img, .sheet video { width: 100%; height: 100%; object-fit: contain; transition: transform .5s cubic-bezier(.2, .8, .2, 1); }
@@ -144,7 +144,6 @@ p { margin: 0 0 1rem; }
 .sheet.photo img, .sheet.photo video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .works figure:hover .sheet { transform: translateY(-4px); box-shadow: 0 16px 30px -18px rgba(19, 33, 46, .5); }
 .works figure:hover .sheet img, .works figure:hover .sheet video { transform: scale(1.08); }
-.works figcaption { margin-top: .55rem; font-size: .88rem; line-height: 1.4; color: var(--soft); }
 
 /* contact */
 .contact { background: var(--ink); color: #dfe7ee; border-top: 0 !important; }
