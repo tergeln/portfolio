@@ -96,14 +96,12 @@ a:hover { color: var(--accent); }
 .btn.ghost { border-color: transparent; }
 .btn.ghost:hover { background: transparent; color: var(--accent); }
 .portrait { position: relative; align-self: end; justify-self: center; width: min(100%, 430px); }
-.portrait::before { content: ""; position: absolute; left: 50%; top: 4%; width: 92%; aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle at 40% 38%, var(--surface), var(--line)); z-index: 0; }
-.portrait img { position: relative; z-index: 1; display: block; width: 100%; height: auto; max-height: calc(100svh - 7rem); object-fit: contain; object-position: bottom; filter: drop-shadow(0 20px 40px var(--shadow)); }
-.portrait img + img { position: absolute; left: 0; bottom: 0; height: 100%; }
-.portrait .p-img { opacity: 0; animation: portraits 18s infinite; }
-.portrait .p-img:nth-of-type(1) { animation-delay: 0s; }
-.portrait .p-img:nth-of-type(2) { animation-delay: 6s; }
-.portrait .p-img:nth-of-type(3) { animation-delay: 12s; }
-@keyframes portraits { 0% { opacity: 0; transform: translateY(14px); } 5% { opacity: 1; transform: none; } 30% { opacity: 1; transform: none; } 36% { opacity: 0; transform: translateY(-6px); } 100% { opacity: 0; } }
+.card { position: absolute; z-index: 1; width: 46%; margin: 0; padding: 6px; background: #fff; border-radius: 6px; box-shadow: 0 18px 40px -18px var(--shadow); transition: transform .5s cubic-bezier(.22, 1, .36, 1), z-index 0s; }
+.card img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 3px; }
+.c-sea { left: -10%; top: 12%; transform: rotate(-7deg); }
+.c-gate { right: -22%; top: 30%; transform: rotate(6deg); }
+.card:hover { transform: rotate(0deg) scale(1.05); z-index: 3; }
+.portrait .me { position: relative; z-index: 2; display: block; width: 100%; height: auto; max-height: calc(100svh - 7rem); object-fit: contain; object-position: bottom; filter: drop-shadow(0 20px 40px var(--shadow)); }
 
 /* ---------- sections ---------- */
 main > section:not(.hero) { padding: clamp(3rem, 6vw, 4.75rem) 0; border-top: 1px solid var(--line); position: relative; scroll-margin-top: 4rem; }
@@ -167,8 +165,10 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid var(--panel-lin
 .hero h1 span:nth-child(2) { animation-delay: .35s; }
 .role { animation-delay: .45s; }
 .hero .actions { animation-delay: .58s; }
-.portrait::before { animation: grow 1.2s .15s cubic-bezier(.22, 1, .36, 1) both; }
-@keyframes grow { from { opacity: 0; transform: translateX(-50%) scale(.8); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
+.portrait .me { animation: rise 1.1s .3s cubic-bezier(.22, 1, .36, 1) both; }
+.c-sea { animation: card-in 1s .15s cubic-bezier(.22, 1, .36, 1) backwards; --r: -7deg; --dx: 30%; }
+.c-gate { animation: card-in 1s .3s cubic-bezier(.22, 1, .36, 1) backwards; --r: 6deg; --dx: -30%; }
+@keyframes card-in { from { opacity: 0; transform: translateX(var(--dx)) rotate(0deg) scale(.9); } to { opacity: 1; transform: rotate(var(--r)); } }
 
 /* sections: heading first, then items one by one */
 .js .reveal h2 { opacity: 0; transform: translate3d(0, 14px, 0); transition: opacity 1s cubic-bezier(.22, 1, .36, 1), transform 1.1s cubic-bezier(.22, 1, .36, 1); will-change: opacity, transform; }
@@ -180,7 +180,7 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid var(--panel-lin
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; min-height: 0; padding-top: 2.5rem; }
   .hero-text { padding-bottom: 1rem; }
-  .portrait { width: min(80%, 340px); }
+  .portrait { width: min(62%, 300px); }
   .cols { grid-template-columns: 1fr; }
   .top nav { top: 100%; left: 0; right: 0; width: auto; padding: 0 clamp(1.1rem, 4vw, 2.5rem) .6rem; font-size: 1.05rem; border-radius: 0; border-width: 0 0 1px; background: var(--bg); box-shadow: 0 14px 24px -14px var(--shadow); }
 }
@@ -194,6 +194,4 @@ footer p { margin: 0; padding-top: 1.4rem; border-top: 1px solid var(--panel-lin
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal h2, .js .reveal .stagger { opacity: 1; transform: none; }
-  .portrait .p-img + .p-img { display: none; }
-  .portrait .p-img:first-of-type { opacity: 1; }
 }
