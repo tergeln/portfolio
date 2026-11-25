@@ -95,7 +95,7 @@ a:hover { color: var(--accent); }
 
 /* photo prints */
 .prints { position: relative; aspect-ratio: 1 / .72; max-width: 580px; width: 100%; justify-self: start; order: -1; }
-.print { position: absolute; width: 40%; margin: 0; padding: 7px; background: var(--surface); box-shadow: 0 14px 34px -14px var(--shadow); transform: rotate(var(--r)); transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s; }
+.print { position: absolute; width: 40%; margin: 0; padding: 7px; background: #fff; box-shadow: 0 14px 34px -14px var(--shadow); transform: rotate(var(--r)); transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s; }
 .print img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
 .print.p1 { --r: -5deg; left: 0; top: 12%; z-index: 1; }
 .print.p2 { --r: 2deg; left: 30%; top: 0; z-index: 2; }
