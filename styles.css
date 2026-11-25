@@ -115,7 +115,7 @@ p { margin: 0 0 1rem; }
 .item { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: .3rem 1.5rem; padding: 1.4rem 0; border-top: 1px solid var(--rule); }
 .item:first-child { border-top: 0; padding-top: 0; }
 .item:last-child { padding-bottom: 0; }
-.when { color: var(--soft); font-size: .95rem; padding-top: .15rem; font-variant-numeric: tabular-nums; }
+.when { color: var(--soft); font-size: .95rem; padding-top: .15rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .where { color: var(--sea); font-weight: 500; margin: .1rem 0 .5rem; }
 .item p:last-child { margin-bottom: 0; color: var(--soft); }
 .item ul, .project ul { margin: .4rem 0 0; padding-left: 1.1rem; color: var(--soft); }
