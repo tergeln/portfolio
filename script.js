@@ -121,6 +121,24 @@
     requestAnimationFrame(function () { onScroll(); ticking = false; });
   }, { passive: true });
   onScroll();
+  // photo carousel: switches every 4 s, click the photo or a dot to change
+  var pics = document.querySelectorAll('.stage .me');
+  var dots = document.querySelectorAll('.dots button');
+  var cur = 0, timer = null;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(k) {
+    pics[cur].classList.remove('on'); dots[cur].removeAttribute('aria-current');
+    cur = (k + pics.length) % pics.length;
+    void pics[cur].offsetWidth;
+    pics[cur].classList.add('on'); dots[cur].setAttribute('aria-current', 'true');
+  }
+  function restart() { if (still) return; clearInterval(timer); timer = setInterval(function () { show(cur + 1); }, 4000); }
+  if (pics.length) {
+    document.querySelector('.stage').addEventListener('click', function () { show(cur + 1); restart(); });
+    dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); restart(); }); });
+    restart();
+  }
+
   // light / dark theme
   var themeBtn = document.querySelector('.theme-btn');
   themeBtn.addEventListener('click', function () {

@@ -46,10 +46,17 @@
             <a class="btn ghost" href="#contact" data-i18n="hero.contact">Get in touch</a>
           </div>
         </div>
-        <div class="portrait">
-          <figure class="card c-sea"><img src="assets/photo-sea.jpg" width="900" height="1200" alt="Tergel wrapped in a green plaid blanket in front of a stormy sea" data-i18n-alt="alt.sea"></figure>
-          <figure class="card c-gate"><img src="assets/photo-gate.jpg" width="900" height="1200" alt="Tergel balancing on one leg in front of a red wooden gate painted with a red and blue circle" data-i18n-alt="alt.gate"></figure>
-          <img class="me" src="assets/portrait.webp" width="622" height="900" alt="Tergel standing on a university campus" data-i18n-alt="alt.campus">
+        <div class="portrait" aria-roledescription="carousel">
+          <button type="button" class="stage" aria-label="Next photo">
+            <img class="me on" src="assets/portrait.webp" width="622" height="900" alt="Tergel standing on a university campus" data-i18n-alt="alt.campus">
+            <img class="me" src="assets/portrait-sea.webp" width="622" height="900" alt="Tergel wrapped in a green plaid blanket" data-i18n-alt="alt.sea">
+            <img class="me" src="assets/portrait-gate.webp" width="622" height="900" alt="Tergel balancing on one leg" data-i18n-alt="alt.gate">
+          </button>
+          <div class="dots">
+            <button type="button" aria-label="Photo 1" aria-current="true"></button>
+            <button type="button" aria-label="Photo 2"></button>
+            <button type="button" aria-label="Photo 3"></button>
+          </div>
         </div>
       </div>
     </section>
