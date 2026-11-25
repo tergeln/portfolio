@@ -86,7 +86,7 @@
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
     reveals.forEach(function (r) { io.observe(r); });
   } else {
     reveals.forEach(function (r) { r.classList.add('in'); });
@@ -109,7 +109,11 @@
     var max = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.setProperty('--p', max > 0 ? Math.min(window.scrollY / max, 1) : 0);
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () { onScroll(); ticking = false; });
+  }, { passive: true });
   onScroll();
   // light / dark theme
   var themeBtn = document.querySelector('.theme-btn');
